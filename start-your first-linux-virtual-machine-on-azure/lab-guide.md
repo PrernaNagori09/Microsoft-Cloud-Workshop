@@ -88,10 +88,10 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 For production use, you may wish to Create a custom VM image that includes your application installed and configured.So we create custom script for nagix web server with index.js file. you can download that custom file using below coommand :-
 
 Run On Azure Bash<br/>
-'''
-wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt
 
-'''
+**wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt**
+
+
 
 <img src="images/githubscript.png"/><br/>
 
@@ -116,9 +116,14 @@ az network lb rule create --resource-group YourResourceGroup --name myLoadBalanc
   ```
 az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSet --output table 
   ```
-  <img src="images/githubscript.png"/><br/>
+  <img src="images/runninginstances.png"/><br/>
   
   5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
+  
+   <img src="images/output.png"/><br/>
+   
+   
+  
   
  
   
