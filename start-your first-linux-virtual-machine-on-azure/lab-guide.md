@@ -48,11 +48,11 @@ Azure hosts Azure Cloud Shell, an interactive shell environment that you can use
 
 2. Select Bash.<br/>
 
-<img src="images/portssh.png"/><br/>
+<img src="images/bash.png"/><br/>
 
 3. Select your suscription and click on show advance setting aand fill required information to create storage account and then select      create storage. <br/>
 
-<img src="images/portssh.png"/><br/>
+<img src="images/bashstorage.png"/><br/>
 
 <img src="images/portssh.png"/><br/>
 
