@@ -56,26 +56,7 @@ Azure hosts Azure Cloud Shell, an interactive shell environment that you can use
 
 <img src="images/portssh.png"/><br/>
 
-**Create SSH key pair**
 
-You need an **SSH key pair** to complete this quickstart. If you already have an SSH key pair, you can skip this step.
-
-1. Open a **bash shell** and use ssh-keygen to create an SSH key pair. If you don't have a bash shell on your local computer, you can      use the Azure Cloud Shell.<br/>
-
-2. In the menu at the top of the page, select the **>_** icon to open Cloud Shell.<br/>
-
-3. Make sure the CloudShell says Bash in the upper left. If it says PowerShell, use the drop-down to select Bash and select Confirm to      change to the **Bash shell**.<br/>
-
-4. Type **ssh-keygen -t rsa -b 2048** to create the ssh key.<br/>
-
-5. You will be prompted to enter a file in which to save the key pair. Just press **Enter** to save in the default location, listed in      brackets.<br/>
-
-6. You will be asked to enter a **passphrase**. You can type a passphrase for your SSH key or press Enter to continue without a            passphrase.<br/>
-
-7. The ssh-keygen command generates public and private keys with the default name of id_rsa in the **~/.ssh directory**. The command        returns the full path to the public key. Use the path to the public key to display its contents with cat by typing 
-   **cat ~/.ssh/id_rsa.pub**.<br/>    
-   
-8. Copy the output of this command and save it somewhere to use later in this article. This is your public key and you will need it when    configuring your administrator account to log in to your VM.<br/>
 
 **Create virtual machine**
 
@@ -89,9 +70,9 @@ You need an **SSH key pair** to complete this quickstart. If you already have an
 
 <img src="images/vmname.png"/><br/>
 
-4. Under Administrator account, select SSH public key, type your **User Name**, then paste in your **Public Key**. Remove any leading or    trailing white space in your public key.<br/>
+4. Under Administrator account, select **Password**, type your **User Name** or **Password**.<br/>
 
-<img src="images/sshkey.png"/><br/>
+<img src="images/adminp.png"/><br/>
 
 5. Under **Inbound port** rules > Public inbound ports, choose Allow selected ports and then select **SSH (22)** from the drop-down.<br/>
 
