@@ -1,9 +1,9 @@
 
 
-   * [Exercise 01: Sign Up for Pre-configured Environment](#exercise-01-sign-up-for-pre-configured-environment)
+   
  
  ### Lab Overview
-
+ In this lab you learn how to create Linux Machine using Azure Portal. You configure Virtual Machine Sacle Set.
 
 
 ### Exercise 1: Sign Up for pre configured environment
