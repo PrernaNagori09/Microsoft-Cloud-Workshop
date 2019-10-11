@@ -3,7 +3,7 @@
    
  
  ### Lab Overview
- In this lab you learn how to create Linux Machine using Azure Portal. You configure Virtual Machine Sacle Set.
+ In this lab you learn how to create Linux Machine using Azure Portal. You configure Virtual Machine Scale Set.
 
 
 ### Exercise 1: Sign Up for pre configured environment
