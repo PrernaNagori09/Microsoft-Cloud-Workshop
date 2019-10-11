@@ -3,13 +3,8 @@
    * [Exercise 01: Sign Up for Pre-configured Environment](#exercise-01-sign-up-for-pre-configured-environment)
  
  ### Lab Overview
-This lab will take you through Azure login and portal experience and the pre-requisite environment.
 
-### Option 1: Using Preconfigured Environment
 
-### Time Estimate
-
-10 minutes
 
 ### Exercise 1: Sign Up for pre configured environment
 
