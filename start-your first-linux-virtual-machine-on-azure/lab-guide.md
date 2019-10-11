@@ -85,7 +85,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **Create an app to scale** <br/>
 
-For production use, you may wish to create a custom VM image that includes pre-installed application .You can download that custom file using below command:-
+For production use, we have already created a custom VM image that includes pre-installed application .You can download that custom file using below command:-
 
 Run On Azure Bash<br/>
 
