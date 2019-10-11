@@ -1,4 +1,4 @@
-# Module 0: Introduction to Azure Portal
+
 
    * [Exercise 01: Sign Up for Pre-configured Environment](#exercise-01-sign-up-for-pre-configured-environment)
  
@@ -11,15 +11,15 @@
 In this exercise, you will create a source environment.
 1.	**Navigate** to bitly link which was provided by instructor and register by providing all required information and **clicking** on **SUBMIT button**.<br/>
 
-<img src="images/signin.png"/><br/>
+<img src="images/sigin1.png"/><br/>
 
 2. Once registration is accepted, you will be automatically redirected to the lab activation page. Now, it is advised to save a copy of the URL on the browser, which has the activation id. **Click** on the **Launch Lab** button.<br/>
 
-<img src="images/launch.png"/><br/>
+<img src="images/screen1.png"/><br/>
 
 3. You will see the environment details soon below.<br/>
 
-<img src="images/credentials.png"/><br/>
+<img src="images/screen2.png"/><br/>
 
 Please ensure to take the values assigned to your deployment.
 
@@ -31,31 +31,13 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 2.  **Enter** the **Username** which was displayed in the previous window and **click** on **Next**.<br/>
 
-<img src="images/azuresigninpage.png"/><br/>
+<img src="images/sccreen3.png"/><br/>
 
 3.	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
 
-<img src="images/passwordsignin.png"/><br/>
+<img src="images/scrren4.png"/><br/>
 
 ### Exercise 3: Create a Linux virtual machine in the Azure portal
-
-**Use Azure Cloud Shell** <br/>
-Azure hosts Azure Cloud Shell, an interactive shell environment that you can use through your browser. Cloud Shell lets you use either bash or PowerShell to work with Azure services. You can use the Cloud Shell pre-installed commands to run the code in this article without having to install anything on your local environment.<br/>
-
-1. Select the Cloud Shell button on the top-right menu bar in the Azure portal.<br/>
-
-<img src="images/portssh.png"/><br/><br/>
-
-2. Select Bash.<br/>
-
-<img src="images/bash.png"/><br/>
-
-3. Select your suscription and click on show advance setting aand fill required information to create storage account and then select      create storage. <br/>
-
-<img src="images/bashstorage.png"/><br/>
-
-<img src="images/portssh.png"/><br/>
-
 
 
 **Create virtual machine**
@@ -84,10 +66,13 @@ Azure hosts Azure Cloud Shell, an interactive shell environment that you can use
 
 8. Connect to virtual machine<br/>
   
-  -Run this command in Azure CLI<br/>
+  * Run this command in Azure Bash<br/>
   ```
-    ssh azureuser@10.111.12.123
+    ssh azureuser@YourPublicIP
+   
   ```
+<img src="images/ linuxssh.png"/><br/>
+
 
 ### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
 
@@ -100,7 +85,16 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **Create an app to scale** <br/>
 
-For production use, you may wish to Create a custom VM image that includes your application installed and configured.So we create custom script for nagix web server with index.js file.Which we deploy<br/>
+For production use, you may wish to Create a custom VM image that includes your application installed and configured.So we create custom script for nagix web server with index.js file. you can download that custom file using below coommand :-
+
+Run On Azure Bash<br/>
+'''
+wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt
+
+'''
+
+<img src="images/githubscript.png"/><br/>
+
 
 **Create a scale set** <br/>
 
@@ -109,23 +103,24 @@ For production use, you may wish to Create a custom VM image that includes your 
 ```
 az vmss create --resource-group YourResourceGroupName --name NameofYourScaleset --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.txt --admin-username azureuser --generate-ssh-keys 
 ```
+<img src="images/scalsetscreenshot.png"/><br/>
   
   2. To allow traffic to reach the web app, create a rule with az network lb rule create.<br/>
  ```
-az network lb rule create --resource-group YourResourceGroupName --name myLoadBalancerRuleWeb --lb-name NameofScaleSetLB --backend-pool-name NameofScaleSetLBBEPool --backend-port 80 --frontend-ip-name NameofloadBalancerFrontEnd --frontend-port 80 --protocol tcp
+az network lb rule create --resource-group YourResourceGroup --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
   ```
+  <img src="images/Loadbalancerrule1.png"/><br/>
   
-  3. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
   4. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
   ```
 az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSet --output table 
   ```
+  <img src="images/githubscript.png"/><br/>
   
-  5. You can then manually increase or decrease the number of virtual machines in the scale set with az vmss scale. The following             example sets the number of VMs in your scale set to 3: <br/>
-```
-az vmss scale --resource-group myResourceGroupScaleSet --name myScaleSet --new-capacity 3
-  ```
+  5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
+  
+ 
   
 
 
