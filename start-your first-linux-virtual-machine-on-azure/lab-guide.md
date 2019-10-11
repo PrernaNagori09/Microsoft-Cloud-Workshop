@@ -35,47 +35,6 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 ### Exercise 3: Create a Linux virtual machine in the Azure portal
 
-Azure virtual machines (VMs) can be created through the Azure portal. The Azure portal is a browser-based user interface to create Azure resources. This quickstart shows you how to use the Azure portal to deploy a Linux virtual machine (VM) running Ubuntu 18.04 LTS. To see your VM in action, you also SSH to the VM.
-**Create SSH key pair**
-
-You need an SSH key pair to complete this quickstart. If you already have an SSH key pair, you can skip this step.
-
-1.Open a bash shell and use ssh-keygen to create an SSH key pair. If you don't have a bash shell on your local computer, you can use the Azure Cloud Shell.<br/>
-2.In the menu at the top of the page, select the >_ icon to open Cloud Shell.<br/>
-3.Make sure the CloudShell says Bash in the upper left. If it says PowerShell, use the drop-down to select Bash and select Confirm to change to the Bash shell.<br/>
-4.Type ssh-keygen -t rsa -b 2048 to create the ssh key.<br/>
-5.You will be prompted to enter a file in which to save the key pair. Just press Enter to save in the default location, listed in brackets.<br/>
-6.You will be asked to enter a passphrase. You can type a passphrase for your SSH key or press Enter to continue without a passphrase.<br/>
-7.The ssh-keygen command generates public and private keys with the default name of id_rsa in the ~/.ssh directory. The command returns the full path to the public key. Use the path to the public key to display its contents with cat by typing cat ~/.ssh/id_rsa.pub.<br/>
-8.Copy the output of this command and save it somewhere to use later in this article. This is your public key and you will need it when configuring your administrator account to log in to your VM.<br/>
-
-**Create virtual machine**
-
-1.Choose Create a resource in the upper left corner of the Azure portal and select Ubuntu Server 18.04 LTS .<br/>
-<img src="images/ubuntu1.png"/><br/>
-2.In the Basics tab, under Project details, make sure the correct subscription is selected and then choose your Resource group.<br/>
-<img src="images/vmsuscription.png"/><br/>
-3.Under Instance details, type myVM for the Virtual machine name and choose East US for your Region. Leave the other defaults.<br/>
-<img src="images/vmname.png"/><br/>
-4.Under Administrator account, select SSH public key, type your user name, then paste in your public key. Remove any leading or trailing white space in your public key.<br/>
-<img src="images/sshkey.png"/><br/>
-5.Under Inbound port rules > Public inbound ports, choose Allow selected ports and then select SSH (22) from the drop-down.<br/>
-<img src="images/portssh.png"/><br/>
-6.Leave the remaining defaults and then select the Review + create button at the bottom of the page.<br/>
-7.On the Create a virtual machine page, you can see the details about the VM you are about to create. When you are ready, select Create.<br/>
-
-8.Connect to virtual machine<br/>
-  -Run this command in Azure CLI<br/>
-    ssh azureuser@10.111.12.123<br/>
-
-### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
-
-A virtual machine scale set allows you to deploy and manage a set of identical, auto-scaling virtual machines. You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage such as CPU, memory demand, or network traffic. In this exercise, you deploy a virtual machine scale set in Azure. You learn how to:<br/>
-
-- Use cloud-init to create an app to scale<br/>
-- Create a virtual machine scale set<br/>
-- Increase or decrease the number of instances in a scale set<br/>
-
 **Use Azure Cloud Shell** <br/>
 Azure hosts Azure Cloud Shell, an interactive shell environment that you can use through your browser. Cloud Shell lets you use either bash or PowerShell to work with Azure services. You can use the Cloud Shell pre-installed commands to run the code in this article without having to install anything on your local environment.<br/>
 
@@ -87,50 +46,77 @@ Azure hosts Azure Cloud Shell, an interactive shell environment that you can use
 <img src="images/portssh.png"/><br/>
 <img src="images/portssh.png"/><br/>
 
+Azure virtual machines (VMs) can be created through the Azure portal. The Azure portal is a browser-based user interface to create Azure resources. This quickstart shows you how to use the Azure portal to deploy a Linux virtual machine (VM) running Ubuntu 18.04 LTS. To see your VM in action, you also SSH to the VM.
+**Create SSH key pair**
+
+You need an **SSH key pair** to complete this quickstart. If you already have an SSH key pair, you can skip this step.
+
+1.Open a **bash shell** and use ssh-keygen to create an SSH key pair. If you don't have a bash shell on your local computer, you can use the Azure Cloud Shell.<br/>
+2.In the menu at the top of the page, select the **>_** icon to open Cloud Shell.<br/>
+3.Make sure the CloudShell says Bash in the upper left. If it says PowerShell, use the drop-down to select Bash and select Confirm to change to the **Bash shell**.<br/>
+4.Type **ssh-keygen -t rsa -b 2048** to create the ssh key.<br/>
+5.You will be prompted to enter a file in which to save the key pair. Just press **Enter** to save in the default location, listed in brackets.<br/>
+6.You will be asked to enter a **passphrase**. You can type a passphrase for your SSH key or press Enter to continue without a passphrase.<br/>
+7.The ssh-keygen command generates public and private keys with the default name of id_rsa in the **~/.ssh directory**. The command returns the full path to the public key. Use the path to the public key to display its contents with cat by typing **cat ~/.ssh/id_rsa.pub**.<br/>
+8.Copy the output of this command and save it somewhere to use later in this article. This is your public key and you will need it when configuring your administrator account to log in to your VM.<br/>
+
+**Create virtual machine**
+
+1.Choose **Create a resource** in the upper left corner of the Azure portal and select **Ubuntu Server 18.04 LTS**.<br/>
+<img src="images/ubuntu1.png"/><br/>
+2.In the Basics tab, under Project details, make sure the correct **Subscription** is selected and then choose your **Resource group**.<br/>
+<img src="images/vmsuscription.png"/><br/>
+3.Under Instance details, type **Name of VM** for the Virtual machine name and choose East US for your Region. Leave the other defaults.<br/>
+<img src="images/vmname.png"/><br/>
+4.Under Administrator account, select SSH public key, type your **User Name**, then paste in your **Public Key**. Remove any leading or trailing white space in your public key.<br/>
+<img src="images/sshkey.png"/><br/>
+5.Under **Inbound port** rules > Public inbound ports, choose Allow selected ports and then select **SSH (22)** from the drop-down.<br/>
+<img src="images/portssh.png"/><br/>
+6.Leave the remaining defaults and then select the **Review + create** button at the bottom of the page.<br/>
+7.On the Create a virtual machine page, you can see the details about the VM you are about to create. When you are ready, select **Create**.<br/>
+
+8.Connect to virtual machine<br/>
+  -Run this command in Azure CLI<br/>
+  ```
+    ssh azureuser@10.111.12.123
+  ```
+
+### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
+
+A virtual machine scale set allows you to deploy and manage a set of identical, auto-scaling virtual machines. You can scale the number of VMs in the scale set manually, or define rules to autoscale based on resource usage such as CPU, memory demand, or network traffic. In this exercise, you deploy a virtual machine scale set in Azure. You learn how to:<br/>
+
+- Use **cloud-init** to create an app to scale<br/>
+- Create a **Virtual Machine Scale Set**<br/>
+- Increase or decrease the number of instances in a scale set<br/>
+
+
 **Create an app to scale** <br/>
 For production use, you may wish to Create a custom VM image that includes your application installed and configured.So we create custom script for nagix web server with index.js file.Which we deploy<br/>
 
 **Create a scale set** <br/>
 1.create a virtual machine scale set with az vmss create<br/>. 
 
-**az vmss create \<br/>
-  --resource-group YourResourceGroupName \<br/>
-  --name NameofYourScaleset \ <br/>
-  --image UbuntuLTS \ <br/>
-  --upgrade-policy-mode automatic \ <br/>
-  --custom-data cloud-init.txt \ <br/>
-  --admin-username azureuser \ <br/>
-  --generate-ssh-keys <br/>**
+```
+az vmss create --resource-group YourResourceGroupName --name NameofYourScaleset --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.txt --admin-username azureuser --generate-ssh-keys 
+```
   
   2.To allow traffic to reach the web app, create a rule with az network lb rule create.<br/>
-  
-  az network lb rule create \ <br/>
-  --resource-group YourResourceGroupName \ <br/>
-  --name myLoadBalancerRuleWeb \ <br/>
-  --lb-name NameofScaleSetLB \ <br/>
-  --backend-pool-name NameofScaleSetLBBEPool \ <br/>
-  --backend-port 80 \ <br/>
-  --frontend-ip-name NameofloadBalancerFrontEnd \ <br/>
-  --frontend-port 80 \ <br/>
-  --protocol tcp <br/>
+ ```
+az network lb rule create --resource-group YourResourceGroupName --name myLoadBalancerRuleWeb --lb-name NameofScaleSetLB --backend-pool-name NameofScaleSetLBBEPool --backend-port 80 --frontend-ip-name NameofloadBalancerFrontEnd --frontend-port 80 --protocol tcp
+  ```
   
   3.Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to <br/>
   
   4.To view a list of VMs running in your scale set, use az vmss list-instances as follows:
-  
-  az vmss list-instances \ <br/>
-  --resource-group myResourceGroupScaleSet \ <br/>
-  --name myScaleSet \ <br/>
-  --output table
-  
-  Manually increase or decrease VM instances <br/>
+  ```
+az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSet --output table 
+  ```
   
 - You can then manually increase or decrease the number of virtual machines in the scale set with az vmss scale. The following example     sets the number of VMs in your scale set to 3: <br/>
-
-az vmss scale \ <br/>
-    --resource-group myResourceGroupScaleSet \ <br/>
-    --name myScaleSet \ <br/>
-    --new-capacity 3 <br/>
+```
+az vmss scale --resource-group myResourceGroupScaleSet --name myScaleSet --new-capacity 3
+  ```
+  
 
 
 
