@@ -71,7 +71,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
     ssh azureuser@YourPublicIP
    
   ```
-<img src="images/ linuxssh.png"/><br/>
+<img src="images/inuxssh.png"/><br/>
 
 
 ### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
