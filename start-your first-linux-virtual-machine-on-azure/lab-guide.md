@@ -85,7 +85,7 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 
 **Create an app to scale** <br/>
 
-For production use, you may wish to Create a custom VM image that includes your application installed and configured.So we create custom script for nagix web server with index.js file. you can download that custom file using below coommand :-
+For production use, you may wish to create a custom VM image that includes pre-installed application .You can download that custom file using below command:-
 
 Run On Azure Bash<br/>
 
