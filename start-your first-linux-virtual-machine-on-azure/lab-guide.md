@@ -76,7 +76,7 @@ A virtual machine scale set allows you to deploy and manage a set of identical, 
 - Create a virtual machine scale set<br/>
 - Increase or decrease the number of instances in a scale set<br/>
 
-Use Azure Cloud Shell<br/>
+**Use Azure Cloud Shell** <br/>
 Azure hosts Azure Cloud Shell, an interactive shell environment that you can use through your browser. Cloud Shell lets you use either bash or PowerShell to work with Azure services. You can use the Cloud Shell pre-installed commands to run the code in this article without having to install anything on your local environment.<br/>
 
 1.Select the Cloud Shell button on the top-right menu bar in the Azure portal.<br/>
@@ -87,50 +87,50 @@ Azure hosts Azure Cloud Shell, an interactive shell environment that you can use
 <img src="images/portssh.png"/><br/>
 <img src="images/portssh.png"/><br/>
 
-Create an app to scale<br/>
+**Create an app to scale** <br/>
 For production use, you may wish to Create a custom VM image that includes your application installed and configured.So we create custom script for nagix web server with index.js file.Which we deploy<br/>
 
-Create a scale set<br/>
+**Create a scale set** <br/>
 1.create a virtual machine scale set with az vmss create<br/>. 
 
-az vmss create \<br/>
+**az vmss create \<br/>
   --resource-group YourResourceGroupName \<br/>
-  --name NameofYourScaleset \<br/>
-  --image UbuntuLTS \<br/>
-  --upgrade-policy-mode automatic \<br/>
-  --custom-data cloud-init.txt \<br/>
-  --admin-username azureuser \<br/>
-  --generate-ssh-keys<br/>
+  --name NameofYourScaleset \ <br/>
+  --image UbuntuLTS \ <br/>
+  --upgrade-policy-mode automatic \ <br/>
+  --custom-data cloud-init.txt \ <br/>
+  --admin-username azureuser \ <br/>
+  --generate-ssh-keys <br/>**
   
   2.To allow traffic to reach the web app, create a rule with az network lb rule create.<br/>
   
-  az network lb rule create \<br/>
-  --resource-group YourResourceGroupName \<br/>
-  --name myLoadBalancerRuleWeb \<br/>
-  --lb-name NameofScaleSetLB \<br/>
-  --backend-pool-name NameofScaleSetLBBEPool \<br/>
-  --backend-port 80 \<br/>
-  --frontend-ip-name NameofloadBalancerFrontEnd \<br/>
-  --frontend-port 80 \<br/>
-  --protocol tcp<br/>
+  az network lb rule create \ <br/>
+  --resource-group YourResourceGroupName \ <br/>
+  --name myLoadBalancerRuleWeb \ <br/>
+  --lb-name NameofScaleSetLB \ <br/>
+  --backend-pool-name NameofScaleSetLBBEPool \ <br/>
+  --backend-port 80 \ <br/>
+  --frontend-ip-name NameofloadBalancerFrontEnd \ <br/>
+  --frontend-port 80 \ <br/>
+  --protocol tcp <br/>
   
-  3.Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to<br/>
+  3.Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer distributed traffic to <br/>
   
   4.To view a list of VMs running in your scale set, use az vmss list-instances as follows:
   
-  az vmss list-instances \
-  --resource-group myResourceGroupScaleSet \
-  --name myScaleSet \
+  az vmss list-instances \ <br/>
+  --resource-group myResourceGroupScaleSet \ <br/>
+  --name myScaleSet \ <br/>
   --output table
   
-  Manually increase or decrease VM instances
+  Manually increase or decrease VM instances <br/>
   
-- You can then manually increase or decrease the number of virtual machines in the scale set with az vmss scale. The following example     sets the number of VMs in your scale set to 3:
+- You can then manually increase or decrease the number of virtual machines in the scale set with az vmss scale. The following example     sets the number of VMs in your scale set to 3: <br/>
 
-az vmss scale \
-    --resource-group myResourceGroupScaleSet \
-    --name myScaleSet \
-    --new-capacity 3
+az vmss scale \ <br/>
+    --resource-group myResourceGroupScaleSet \ <br/>
+    --name myScaleSet \ <br/>
+    --new-capacity 3 <br/>
 
 
 
