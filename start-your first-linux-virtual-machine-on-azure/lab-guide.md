@@ -98,16 +98,16 @@ Run On Azure Bash<br/>
 
 **Create a scale set** <br/>
 
-1. create a virtual machine scale set with az vmss create<br/>. 
+1. create a virtual machine scale set with az vmss create. Enter your **Resource Gruoup** . you<br/>. 
 
 ```
-az vmss create --resource-group YourResourceGroupName --name NameofYourScaleset --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloud-init.txt --admin-username azureuser --generate-ssh-keys 
+az vmss create -resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloudinit1.txt --admin-username azureuser --generate-ssh-keys
 ```
 <img src="images/scalsetscreenshot.png"/><br/>
   
   2. To allow traffic to reach the web app, create a rule with az network lb rule create.<br/>
  ```
-az network lb rule create --resource-group YourResourceGroup --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
+az network lb rule create --resource-group myResourceGroupScaleSet --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
   ```
   <img src="images/Loadbalancerrule1.png"/><br/>
   
