@@ -88,8 +88,9 @@ A **Virtual Machine Scale Set** allows you to deploy and manage a set of identic
 For production use, we have already created a custom VM image that includes pre-installed application .You can download that custom file using below command:-
 
 Run On Azure Bash<br/>
-
-**wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt**
+```
+wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt
+```
 
 
 
