@@ -77,11 +77,11 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 2. Select **BASH** in cloud shell window.<br/>
 
-3.Select **Advance Option".
+3.Select **Show Advance Setting".<br/>
 
-3. Create a storage for Bash.<br/>
+3. Create a storage for Bash give **Storage Name** then click on **Create Storage**.<br/>
 
-<img src="images/linuxssh.png"/><br/>
+<img src="images/st.png"/><br/>
 
 4. Paste the **Public IP** that you copied in privious step in command and run this command on **Cloud Shell**.<br/>
 
