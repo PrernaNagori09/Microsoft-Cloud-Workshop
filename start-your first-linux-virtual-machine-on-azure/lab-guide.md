@@ -2,39 +2,26 @@
 
    
  
- ### Lab Overview
+### Lab Overview
  In this lab you will learn how to create Linux Vitual Machine using Azure Portal. You will also configure Virtual Machine Scale Set.
-
-
-### Exercise 1: Sign Up for pre configured environment
-
-In this exercise, you will create a source environment.
-1.	**Navigate** to bitly link which was provided by instructor and register by providing all required information and **clicking** on **SUBMIT button**.<br/>
-
-<img src="images/sigin1.png"/><br/>
-2. Once registration is accepted, you will be automatically redirected to the lab activation page. Now, it is advised to save a copy of the URL on the browser, which has the activation id. **Click** on the **Launch Lab** button.<br/>
-
-<img src="images/screen1.png"/><br/>
-
-3. You will see the environment details soon below.<br/>
-
-<img src="images/screen2.png"/><br/>
-
-Please ensure to take the values assigned to your deployment.
-
-### Exercise 2: Log into your Azure Portal and Verify access to the Subscription
+ 
+### Exercise 1: Log into your Azure Portal and Verify access to the Subscription
 
 In this exercise, you will log into the **Azure Portal** using your Azure credentials and you will verify the type of role you are assigned in this Subscription.
 
-1.  **Navigate** to https://portal.azure.com and login (from the previous step).
+1.	**Navigate** to bitly link which was provided by instructor and register by providing all required information and **clicking** on **SUBMIT button**.<br/>
 
-2.  **Enter** the **Username** which was displayed in the previous window and **click** on **Next**.<br/>
+2. Once registration is accepted, you will be automatically redirected to the lab activation page. Now, it is advised to save a copy of the URL on the browser, which has the activation id. **Click** on the **Launch Lab** button.<br/>
 
-<img src="images/sccreen3.png"/><br/>
+3. You will see the environment details soon. Use that deatils for login into the azure portal.<br/>
 
-3.	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
+4. **Navigate** to https://portal.azure.com and login (from the previous step).
 
-<img src="images/validation.png.png"/><br/>
+5. **Enter** the **Username** and **click** on **Next**.<br/>
+
+
+6.	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
+
 
 ### Exercise 3: Create a Linux virtual machine in the Azure portal
 
