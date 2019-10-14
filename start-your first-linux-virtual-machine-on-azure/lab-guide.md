@@ -65,7 +65,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 7. On the Create a virtual machine page, you can see the details about the VM you are about to create. When you are ready, select        **Create**.<br/>
  
- <img src="images/validation.png.png"/><br/>
+ <img src="images/validation.png"/><br/>
 
 8. For connecting to virtual machine copy the virtual machine **Public IP**. <br/>
 
