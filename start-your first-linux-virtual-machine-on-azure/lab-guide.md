@@ -112,8 +112,6 @@ Run On Azure Cloud Shell<br/>
 wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt
 ```
 
-
-
 <img src="images/githubscript.png"/><br/>
 
 
