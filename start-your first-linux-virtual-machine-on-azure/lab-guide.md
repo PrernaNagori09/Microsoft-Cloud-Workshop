@@ -112,7 +112,7 @@ wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/star
     - --admin-username :- Enter **Admin User** name.
 
 ```
-az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloudinit1.txt --admin-username azureuser --generate-ssh-keys
+az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data coustomscript.txt --admin-username azureuser --generate-ssh-keys
 ```
    <img src="images/scalsetscreenshot.png"/><br/>
   
