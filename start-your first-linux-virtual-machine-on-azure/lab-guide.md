@@ -12,6 +12,10 @@ In this exercise, you will create a source environment.
 1.	**Navigate** to bitly link which was provided by instructor and register by providing all required information and **clicking** on **SUBMIT button**.<br/>
 
 <img src="images/sigin1.png"/><br/>
+<img class="mySlides" src="sigin1.png">
+<img class="mySlides" src="sigin1.png">
+<img class="mySlides" src="sigin1.png">
+<img class="mySlides" src="sigin1.png">
 
 2. Once registration is accepted, you will be automatically redirected to the lab activation page. Now, it is advised to save a copy of the URL on the browser, which has the activation id. **Click** on the **Launch Lab** button.<br/>
 
