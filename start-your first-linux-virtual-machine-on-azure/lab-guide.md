@@ -69,13 +69,15 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 8. For connecting to virtual machine copy the virtual machine **Public IP**. <br/>
 
-      <img src="images/publicipvm.png"/><br/>
+      <img src="images/ubuntufinal.png"/><br/>
       
 **Connect to virtual machine**
 
-1. Select this sign **>_** .<br/>
+1. Select this sign **">_"** .<br/>
 
 2. Select **BASH** in cloud shell window.<br/>
+
+3.Select **Advance Option".
 
 3. Create a storage for Bash.<br/>
 
@@ -87,7 +89,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
     ssh azureuser@40.71.212.131
    
   ```
-<img src="images/linuxssh.png"/><br/>
+<img src="images/ssh.png"/><br/>
 
 
 ### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
