@@ -55,7 +55,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 4. Under Administrator account, select **Password**, type your **User Name** or **Password**.<br/>
 
-<img src="images/adminp.png"/><br/>
+     <img src="images/adminp.png"/><br/>
 
 5. Under **Inbound port** rules > Public inbound ports, choose **Allow selected ports** and then select **SSH (22)** from the drop-down.<br/>
 
@@ -91,7 +91,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
     ssh azureuser@40.71.212.131
    
   ```
-<img src="images/ssh.png"/><br/>
+   <img src="images/ssh.png"/><br/>
 
 
 ### Exercise 3: Create a virtual machine scale set and deploy a highly available app on Linux with the Azure CLI
