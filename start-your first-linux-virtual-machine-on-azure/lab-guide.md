@@ -107,34 +107,35 @@ wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/star
 **Create a scale set** <br/>
 
 1. create a virtual machine scale set with az vmss create. 
-    * --resource-group :- Enter your **Resource Group** name.
-    * --name :- Enter **Scale Set** name.
-    * --admin-username :- Enter **Admin User** name.
+    - --resource-group :- Enter your **Resource Group** name.
+    - --name :- Enter **Scale Set** name.
+    - --admin-username :- Enter **Admin User** name.
 
 ```
 az vmss create --resource-group myResourceGroupScaleSet --name myScaleSet --image UbuntuLTS --upgrade-policy-mode automatic --custom-data cloudinit1.txt --admin-username azureuser --generate-ssh-keys
 ```
-     <img src="images/scalsetscreenshot.png"/><br/>
+   <img src="images/scalsetscreenshot.png"/><br/>
   
   2. To allow traffic to reach the web app, create a rule with az network lb rule create.<br/>
-    * --resource-group :- Enter your **Resource Group** name
+      - --resource-group :- Enter your **Resource Group** name.
  ```
 az network lb rule create --resource-group myResourceGroupScaleSet --name myLoadBalancerRuleWeb  --lb-name myScaleSetLB  --backend-pool-name myScaleSetLBBEPool  --backend-port 80  --frontend-ip-name loadBalancerFrontEnd  --frontend-port 80  --protocol tcp
   ```
-      <img src="images/Loadbalancerrule1.png"/><br/>
+   <img src="images/Loadbalancerrule1.png"/><br/>
   
   
   4. To view a list of VMs running in your scale set, use az vmss list-instances as follows:
-    * --resource-group :- Enter your **Resource Group** name
-    * --name :- Your **Scale Set** name.
+    - --resource-group :- Enter your **Resource Group** name.
+    - --name :- Your **Scale Set** name.
   ```
 az vmss list-instances --resource-group myResourceGroupScaleSet --name myScaleSet --output table 
   ```
-      <img src="images/runninginstances.png"/><br/>
+  
+   <img src="images/runninginstances.png"/><br/>
   
   5. Enter the public IP address in to a web browser. The app is displayed, including the hostname of the VM that the load balancer          distributed traffic to <br/>
   
-       <img src="images/output.png"/><br/>
+    <img src="images/output.png"/><br/>
    
    
   
