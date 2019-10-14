@@ -43,10 +43,12 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 1. Choose **Create a resource** in the upper left corner of the Azure portal and select **Ubuntu Server 18.04 LTS**.<br/>
 
-<img src="images/ubuntu1.png"/><br/>
+<img src="images/ubuntunew.png"/><br/>
+
 2. In the Basics tab, under Project details, make sure the correct **Subscription** is selected and then choose your **Resource group**.<br/>
 
-<img src="images/vmsuscription.png"/><br/>
+<img src="images/suscription.png"/><br/>
+
 3. Under Instance details, type **Name of VM** for the Virtual machine name,choose **Region** for your **Region** and choose image **"Ubuntu Server 18.04 LTS/Ubuntu Server 16.04 LTS**.<br/>
 
 <img src="images/vmname.png"/><br/>
