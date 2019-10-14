@@ -25,7 +25,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 6.	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
 
 
-### Exercise 3: Create a Linux virtual machine in the Azure portal
+### Exercise 2: Create a Linux virtual machine in the Azure portal
 
 
 **Create virtual machine**
