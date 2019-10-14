@@ -98,7 +98,7 @@ For production use, we have already created a custom VM image that includes pre-
 
 Run On Azure Cloud Shell<br/>
 ```
-wget https://github.com/PrernaNagori09/Microsoft-Cloud-Workshop/blob/master/start-your%20first-linux-virtual-machine-on-azure/cloudinit1.txt
+c
 ```
 
 <img src="images/githubscript.png"/><br/>
