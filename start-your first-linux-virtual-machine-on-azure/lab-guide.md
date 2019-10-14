@@ -34,7 +34,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 3.	In the Stay signed in? pop-up window, click **No**. **Enter** the **Password** and click on **Sign in**.<br/>
 
-<img src="images/scrren4.png"/><br/>
+<img src="images/validation.png.png"/><br/>
 
 ### Exercise 3: Create a Linux virtual machine in the Azure portal
 
@@ -64,18 +64,23 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 6. Leave the remaining defaults and then select the **Review + create** button at the bottom of the page.<br/>
 
 7. On the Create a virtual machine page, you can see the details about the VM you are about to create. When you are ready, select        **Create**.<br/>
+ 
+ <img src="images/validation.png.png"/><br/>
 
 8. For connecting to virtual machine copy the virtual machine **Public IP**. <br/>
 
-      <img src="images/linuxssh.png"/><br/>
+      <img src="images/publicipvm.png"/><br/>
       
 **Connect to virtual machine**
 
-1. Select this sign **>_** .
-c
-2. Select **BASH** in cloud shell window.
-3. Create a storage for Bash.
+1. Select this sign **>_** .<br/>
+
+2. Select **BASH** in cloud shell window.<br/>
+
+3. Create a storage for Bash.<br/>
+
 <img src="images/linuxssh.png"/><br/>
+
 4. Paste the **Public IP** that you copied in privious step in command and run this command on **Cloud Shell**.<br/>
 
   ```
