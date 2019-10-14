@@ -79,7 +79,7 @@ In this exercise, you will log into the **Azure Portal** using your Azure creden
 
 2. Select **BASH** in cloud shell window.<br/>
 
-3.Select **Show Advance Setting**.<br/>
+3. Select **Show Advance Setting**.<br/>
 
 4. Create a storage for Bash give **Storage Name** then click on **Create Storage**.<br/>
 
